@@ -1,159 +1,249 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Vinod Kumar — Performance Engineering, SRE, observability, and AI infrastructure.">
-  <title>Vinod Kumar | Performance Engineering & AI Infrastructure</title>
-  <style>
-    :root {
-      --bg: #080d12; --panel: #101922; --panel2: #0c141c; --text: #edf4f7;
-      --muted: #a6b5bf; --line: #23313b; --accent: #9bdc28; --accent2: #c6f36b;
-      --max: 1080px;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; color: var(--text); background: radial-gradient(ellipse at 85% 0%, #18301c 0, transparent 33%), var(--bg); font: 16px/1.65 Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif; }
-    a { color: var(--accent2); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .wrap { width: min(var(--max), calc(100% - 40px)); margin: auto; }
-    header { position: sticky; top: 0; z-index: 5; background: rgba(8,13,18,.88); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
-    nav { min-height: 66px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
-    .brand { color:var(--text); font-weight:800; letter-spacing:.02em; }
-    .navlinks { display:flex; gap:22px; flex-wrap:wrap; font-size:.9rem; }
-    .navlinks a { color:var(--muted); }
-    .hero { padding: 92px 0 76px; display:grid; grid-template-columns: 1.5fr .8fr; gap:50px; align-items:center; }
-    .eyebrow { color:var(--accent); font-weight:750; text-transform:uppercase; letter-spacing:.16em; font-size:.76rem; }
-    h1 { font-size: clamp(2.7rem, 7vw, 5.2rem); line-height:1.02; letter-spacing:-.055em; margin:15px 0 20px; }
-    h1 span { color:var(--accent); }
-    .lead { color:#c5d1d8; font-size:1.15rem; max-width:690px; }
-    .hero-card { background:linear-gradient(145deg,#16251c,#101922 65%); border:1px solid #354a32; border-radius:22px; padding:26px; box-shadow:0 20px 60px #0005; }
-    .hero-card .metric { font-size:2.2rem; font-weight:850; color:var(--accent); line-height:1.1; }
-    .hero-card p { color:var(--muted); margin:.35rem 0 1.2rem; }
-    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
-    .btn { display:inline-block; padding:11px 17px; border-radius:9px; border:1px solid var(--accent); color:#10170b; background:var(--accent); font-weight:750; }
-    .btn.secondary { background:transparent; color:var(--text); border-color:var(--line); }
-    section { padding:64px 0; border-top:1px solid var(--line); }
-    .section-head { margin-bottom:28px; }
-    h2 { font-size:clamp(1.8rem,4vw,2.5rem); letter-spacing:-.035em; margin:5px 0 8px; }
-    .sub { color:var(--muted); max-width:720px; margin:0; }
-    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
-    .card { background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:22px; }
-    .card h3 { margin:0 0 8px; font-size:1.12rem; }
-    .card p, .card li { color:var(--muted); }
-    .taglist { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
-    .tag { border:1px solid #34434c; background:#0c141c; border-radius:999px; padding:5px 10px; color:#c8d4db; font-size:.82rem; }
-    .timeline { display:grid; gap:14px; }
-    .role { display:grid; grid-template-columns:190px 1fr; gap:20px; padding:20px 0; border-bottom:1px solid var(--line); }
-    .date { color:var(--accent2); font-weight:700; font-size:.92rem; }
-    .role h3 { margin:0; }
-    .role .org { color:var(--muted); margin:2px 0 9px; }
-    ul { padding-left:20px; margin:8px 0; }
-    .notice { border-left:3px solid var(--accent); padding:12px 16px; background:#111c17; border-radius:0 10px 10px 0; color:#cbd8ce; margin-top:18px; }
-    .contact { display:flex; flex-wrap:wrap; gap:14px; margin-top:20px; }
-    footer { padding:28px 0 44px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
-    @media(max-width:760px) { .hero { grid-template-columns:1fr; padding:65px 0 55px; gap:28px; } .grid { grid-template-columns:1fr; } .role { grid-template-columns:1fr; gap:4px; } .navlinks { gap:12px; font-size:.82rem; } }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vinod Kumar | Performance Engineering, SRE & DevOps Lead</title>
+<meta name="description" content="Performance Engineering, SRE and DevOps lead with 20+ years of experience in load testing, observability, chaos engineering and cloud infrastructure.">
+<style>
+:root{
+  --bg:#0f1419; --surface:#171d25; --border:#262f3b; --text:#e6e9ee; --muted:#9aa5b4;
+  --accent:#4cc2a5; --accent-ink:#06231c;
+}
+@media (prefers-color-scheme: light){
+  :root{ --bg:#f7f8fa; --surface:#ffffff; --border:#e2e6ec; --text:#1b2330; --muted:#586374; --accent:#0f8f74; --accent-ink:#ffffff; }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+nav .wrap{display:flex;gap:20px;align-items:center;height:56px;overflow-x:auto;white-space:nowrap}
+nav strong{margin-right:auto}
+nav a{color:var(--muted);font-size:.92rem}
+nav a:hover{color:var(--text);text-decoration:none}
+header.hero{padding:72px 0 48px}
+.eyebrow{color:var(--accent);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem}
+h1{font-size:clamp(2.2rem,6vw,3.4rem);line-height:1.1;margin:10px 0 14px}
+.lead{color:var(--muted);font-size:1.15rem;max-width:640px;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:10px 18px;border-radius:8px;font-weight:600;border:1px solid var(--border);color:var(--text)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn:hover{text-decoration:none;filter:brightness(1.08)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:40px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px}
+.stat b{display:block;font-size:1.7rem;color:var(--accent)}
+.stat span{color:var(--muted);font-size:.9rem}
+section{padding:44px 0;border-top:1px solid var(--border)}
+h2{font-size:1.5rem;margin:0 0 22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px}
+.card h3{margin:0 0 10px;font-size:1rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:.85rem;padding:4px 10px;border-radius:999px;border:1px solid var(--border);color:var(--muted)}
+.timeline{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px solid var(--border)}
+.job{position:relative;margin-bottom:30px}
+.job::before{content:"";position:absolute;left:-29px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.job h3{margin:0;font-size:1.08rem}
+.meta{color:var(--muted);font-size:.9rem;margin:2px 0 8px}
+.job ul{margin:0;padding-left:18px;color:var(--muted)}
+.job li{margin-bottom:4px}
+.earlier li{margin-bottom:6px;color:var(--muted)}
+.earlier{padding-left:18px;margin:0}
+.earlier b{color:var(--text);font-weight:600}
+.clients{color:var(--muted)}
+footer{padding:36px 0 56px;border-top:1px solid var(--border);color:var(--muted);font-size:.9rem}
+</style>
 </head>
 <body>
-<header>
+
+<nav>
   <div class="wrap">
-    <nav aria-label="Main navigation">
-      <a class="brand" href="#top">VINOD KUMAR</a>
-      <div class="navlinks">
-        <a href="#expertise">Expertise</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a>
-      </div>
-    </nav>
+    <strong>Vinod Kumar</strong>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#credentials">Credentials</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Performance Engineering · SRE · DevOps</div>
+    <h1>Vinod Kumar</h1>
+    <p class="lead">Performance Engineering, SRE and DevOps lead with 20+ years of experience making complex, cloud-native systems fast, resilient and observable.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:kumarvinodgupta@gmail.com">Get in touch</a>
+      <a class="btn" href="https://www.linkedin.com/in/vinod-kumar-0a890518" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>20+</b><span>years of experience</span></div>
+      <div class="stat"><b>10+</b><span>Fortune 500 clients</span></div>
+      <div class="stat"><b>4</b><span>industry certifications and counting</span></div>
+      <div class="stat"><b>2</b><span>conference appearances</span></div>
+    </div>
   </div>
 </header>
 
-<main id="top">
-  <div class="wrap hero">
-    <div>
-      <div class="eyebrow">Performance Engineering · SRE · AI Infrastructure</div>
-      <h1>Engineering for <span>performance</span>, scale & resilience.</h1>
-      <p class="lead">I’m Vinod Kumar, a performance engineering leader with 19+ years of experience across performance testing, site reliability engineering, observability, and DevOps. I build testing capabilities, investigate system bottlenecks, and help teams improve the reliability and scalability of distributed applications.</p>
-      <div class="actions">
-        <a class="btn" href="#projects">Explore selected work</a>
-        <a class="btn secondary" href="https://www.linkedin.com/in/vinod-kumar-0a890518/" target="_blank" rel="noopener">LinkedIn profile ↗</a>
+<section id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Performance Engineering</h3>
+        <p class="clients">Building load test labs, generators and monitoring infrastructure from the ground up, and finding bottlenecks across APIs, databases, JVMs and microservices.</p>
+      </div>
+      <div class="card">
+        <h3>Site Reliability</h3>
+        <p class="clients">Monitoring, analyzing and optimizing production systems with DataDog, Dynatrace, New Relic, Grafana and Splunk.</p>
+      </div>
+      <div class="card">
+        <h3>DevOps &amp; Resilience</h3>
+        <p class="clients">CI/CD with Jenkins, Docker, Kubernetes and Terraform, plus chaos experiments with Litmus, Chaos Mesh and Gremlin to validate high availability.</p>
       </div>
     </div>
-    <aside class="hero-card">
-      <div class="metric">19+ years</div><p>Performance engineering experience</p>
-      <div class="metric">CoE leadership</div><p>Frameworks, tooling, enablement and bottleneck resolution</p>
-      <div class="metric">Cloud-native</div><p>Microservices, Kubernetes, GCP, CI/CD and observability</p>
-    </aside>
+    <p class="clients" style="margin-top:22px"><b style="color:var(--text)">Trusted by:</b> MetLife, Mercury Insurance, Travelers Insurance, Comcast, Nike, Johnson &amp; Johnson, General Motors, DSW, ZoomInfo and Fidelity Investments. Experienced leading Centers of Excellence and cross-functional teams.</p>
   </div>
+</section>
 
-  <section id="expertise">
-    <div class="wrap">
-      <div class="section-head"><div class="eyebrow">What I work on</div><h2>Technical expertise</h2><p class="sub">A blend of hands-on engineering, performance strategy, platform tooling and cross-team technical leadership.</p></div>
-      <div class="grid">
-        <article class="card"><h3>Performance engineering</h3><p>Load, stress and scalability testing; workload design; API and web performance; JVM diagnostics; response-time, throughput and error analysis.</p><div class="taglist"><span class="tag">Gatling</span><span class="tag">LoadRunner</span><span class="tag">JMeter</span><span class="tag">k6</span><span class="tag">BlazeMeter</span><span class="tag">NeoLoad</span><span class="tag">Akamai CloudTest</span></div></article>
-        <article class="card"><h3>Observability & APM</h3><p>Application monitoring, distributed tracing, dashboards, alerting and root-cause analysis across microservices and cloud-native applications.</p><div class="taglist"><span class="tag">Dynatrace</span><span class="tag">Datadog</span><span class="tag">New Relic</span><span class="tag">Grafana</span><span class="tag">Splunk</span></div></article>
-        <article class="card"><h3>Cloud, DevOps & automation</h3><p>Performance test infrastructure and CI/CD automation for containerized and cloud-hosted applications.</p><div class="taglist"><span class="tag">Kubernetes</span><span class="tag">GKE / GAE</span><span class="tag">Docker</span><span class="tag">Jenkins</span><span class="tag">Terraform</span><span class="tag">Git</span><span class="tag">AWS</span><span class="tag">Linux</span></div></article>
-        <article class="card"><h3>Resilience & systems analysis</h3><p>Chaos experiments, high-availability validation, JVM thread and heap analysis, database and service bottleneck investigation.</p><div class="taglist"><span class="tag">Gremlin</span><span class="tag">Litmus</span><span class="tag">Chaos Mesh</span><span class="tag">JVM diagnostics</span><span class="tag">REST APIs</span></div></article>
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card"><h3>Load Testing</h3><div class="chips">
+        <span class="chip">Gatling</span><span class="chip">LoadRunner</span><span class="chip">JMeter</span><span class="chip">K6</span><span class="chip">BlazeMeter</span><span class="chip">Taurus</span><span class="chip">NeoLoad</span><span class="chip">Artillery</span><span class="chip">Playwright</span><span class="chip">SOASTA / Akamai CloudTest</span></div></div>
+      <div class="card"><h3>APM &amp; Monitoring</h3><div class="chips">
+        <span class="chip">DataDog</span><span class="chip">Dynatrace</span><span class="chip">New Relic</span><span class="chip">AppDynamics</span><span class="chip">Grafana</span><span class="chip">Splunk</span></div></div>
+      <div class="card"><h3>DevOps &amp; CI/CD</h3><div class="chips">
+        <span class="chip">Git</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Terraform</span><span class="chip">Jenkins</span><span class="chip">Artifactory</span></div></div>
+      <div class="card"><h3>Cloud &amp; Infrastructure</h3><div class="chips">
+        <span class="chip">AWS</span><span class="chip">GCP</span><span class="chip">Cloudflare CDN</span><span class="chip">Linux</span><span class="chip">System performance tuning</span></div></div>
+      <div class="card"><h3>Chaos Engineering</h3><div class="chips">
+        <span class="chip">Litmus</span><span class="chip">Chaos Mesh</span><span class="chip">Gremlin</span></div></div>
+      <div class="card"><h3>Analysis</h3><div class="chips">
+        <span class="chip">JVM tuning</span><span class="chip">Thread / heap dump analysis</span><span class="chip">REST API optimization</span></div></div>
+      <div class="card"><h3>Domains</h3><div class="chips">
+        <span class="chip">Finance</span><span class="chip">Health &amp; auto insurance</span><span class="chip">Retail</span><span class="chip">Media</span><span class="chip">Digital marketing</span><span class="chip">DaaS</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <ul class="timeline">
+
+      <li class="job">
+        <h3>Principal Software Engineer · Fidelity Investments</h3>
+        <div class="meta">Merrimack, NH · June 2025 – Present</div>
+        <ul>
+          <li>Monitor production health and performance, driving proactive incident detection and response.</li>
+          <li>Resolve production incidents with root cause analysis, reproducing traffic in the performance environment using Gatling.</li>
+          <li>Partner with development and infrastructure teams on release testing to catch performance regressions from new code.</li>
+          <li>Support deployments, validate post-release stability and coordinate rollbacks when needed.</li>
+        </ul>
+      </li>
+
+      <li class="job">
+        <h3>Performance Manager · ZoomInfo</h3>
+        <div class="meta">Waltham, MA · July 2021 – April 2025</div>
+        <ul>
+          <li>Built a Gatling performance framework integrated with Maven, Git, Taurus/Docker, Jenkins, BlazeMeter and Grafana.</li>
+          <li>Ran chaos experiments with Litmus and Chaos Mesh to validate high availability and resilience.</li>
+          <li>Led the performance Center of Excellence, providing infrastructure, tooling, support and bottleneck resolution company-wide.</li>
+          <li>Automated load test pipelines through Jenkins and CI/CD workflows.</li>
+          <li>Load tested microservices on GKE and GAE, with DataDog for APM and log monitoring.</li>
+        </ul>
+      </li>
+
+      <li class="job">
+        <h3>Performance Engineer Lead · Constant Contact</h3>
+        <div class="meta">Waltham, MA · March 2018 – July 2021</div>
+        <ul>
+          <li>Acted as SRE, optimizing web page load times and resolving production issues.</li>
+          <li>Used Dynatrace to monitor and optimize microservices and cloud-native applications.</li>
+          <li>Tuned APIs, databases and microservices using Dynatrace's AI-driven diagnostics.</li>
+        </ul>
+      </li>
+
+      <li class="job">
+        <h3>Principal Performance Engineer · DSW Inc.</h3>
+        <div class="meta">Columbus, OH · October 2015 – February 2018</div>
+        <ul>
+          <li>Worked across Oracle ATG Web Commerce, order management, tax calculation and credit card authorization.</li>
+          <li>Contributed to architecture reviews for resilient, scalable and reliable solutions.</li>
+          <li>Applied Akamai CDN, DNS, web-page profiling, LDAP and load balancer expertise to improve performance.</li>
+        </ul>
+      </li>
+
+      <li class="job">
+        <h3>Earlier roles</h3>
+        <div class="meta">2004 – 2015</div>
+        <ul class="earlier">
+          <li><b>Sr. Performance Test Engineer</b> · General Motors, Detroit, MI (2014–2015)</li>
+          <li><b>Sr. Performance Test Engineer</b> · Johnson &amp; Johnson, Malvern, PA (2014)</li>
+          <li><b>Sr. Performance Test Lead</b> · Nike, Beaverton, OR (2012–2013)</li>
+          <li><b>Sr. Performance Test Lead</b> · Comcast, West Chester, PA (2010–2012)</li>
+          <li><b>Performance Test Lead</b> · Travelers Insurance, Hartford, CT (2010)</li>
+          <li><b>Performance Lead</b> · Mercury Insurance Group, CA (2006–2009)</li>
+          <li><b>Performance Lead</b> · MetLife, NJ (2006)</li>
+          <li><b>Java Developer</b> · Cognizant Technology Solutions, India (2004–2005)</li>
+        </ul>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<section id="credentials">
+  <div class="wrap">
+    <h2>Credentials</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Certifications</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted)">
+          <li>Gremlin Certified Chaos Engineering Practitioner</li>
+          <li>New Relic Certified Performance Pro</li>
+          <li>Akamai Cloud Test Foundation &amp; Specialist</li>
+          <li>BlazeMeter Performance Testing Certified Master</li>
+          <li>Cognizant Certified Professional</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Education</h3>
+        <p class="clients" style="margin:0">B.E., Computer Science &amp; Engineering (2004)<br>G. B. Pant Engineering College, India<br>Graduated with honors (77%)</p>
+      </div>
+      <div class="card">
+        <h3>Achievements</h3>
+        <ul style="margin:0;padding-left:18px;color:var(--muted)">
+          <li>"Above and Beyond" Award, Cognizant (twice)</li>
+          <li>"SPOT Award", Cognizant, 2012 (Nike)</li>
+          <li>O'Reilly Velocity Conference, New York, 2019</li>
+          <li>AWS re:Invent, Las Vegas, 2020</li>
+        </ul>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="projects">
-    <div class="wrap">
-      <div class="section-head"><div class="eyebrow">Selected work & technical explorations</div><h2>Projects and areas of focus</h2><p class="sub">Representative work drawn from my professional experience, plus a current area of technical exploration. Detailed public case studies and benchmark data can be added as they are prepared.</p></div>
-      <div class="grid">
-        <article class="card"><h3>Gatling performance testing framework</h3><p>Established a reusable Gatling framework integrated with Maven, Git, Taurus/Docker, Jenkins, BlazeMeter and Grafana. Built CI/CD-connected load-test pipelines to make performance validation repeatable.</p><div class="taglist"><span class="tag">Gatling</span><span class="tag">Maven</span><span class="tag">Jenkins</span><span class="tag">Docker</span><span class="tag">Grafana</span></div></article>
-        <article class="card"><h3>Microservices performance on GCP</h3><p>Executed load tests for microservices-based applications running on Google Kubernetes Engine and Google App Engine, using APM and log monitoring to investigate performance behavior.</p><div class="taglist"><span class="tag">GKE</span><span class="tag">GAE</span><span class="tag">GCP</span><span class="tag">Datadog</span></div></article>
-        <article class="card"><h3>Chaos engineering & resilience</h3><p>Applied chaos experiments using Litmus and Chaos Mesh to validate high availability and application resilience. Gremlin Certified Chaos Engineering Practitioner.</p><div class="taglist"><span class="tag">Chaos Mesh</span><span class="tag">Litmus</span><span class="tag">Gremlin</span></div></article>
-        <article class="card"><h3>LLM inference performance — learning lab</h3><p>Exploring local LLM serving with Ollama and inference benchmarking with AIPerf. Planned measurements include time to first token, inter-token latency, output-token throughput, request throughput and concurrency. Results will be published after repeatable tests are completed.</p><div class="taglist"><span class="tag">Ollama</span><span class="tag">AIPerf</span><span class="tag">LLM inference</span><span class="tag">Benchmarking</span></div></article>
-      </div>
-      <div class="notice"><strong>Benchmark integrity:</strong> No performance numbers are presented here unless they have been measured and documented. Future case studies will include workload, environment, methodology and results so they can be interpreted accurately.</div>
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p class="clients">Open to challenging assignments in Performance Engineering, SRE and DevOps.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:kumarvinodgupta@gmail.com">kumarvinodgupta@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/vinod-kumar-0a890518" target="_blank" rel="noopener">linkedin.com/in/vinod-kumar-0a890518</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="experience">
-    <div class="wrap">
-      <div class="section-head"><div class="eyebrow">Career history</div><h2>Professional experience</h2><p class="sub">Selected roles and contributions from my resume.</p></div>
-      <div class="timeline">
-        <div class="role"><div class="date">June 2025 – Present</div><div><h3>Performance Engineering</h3><div class="org">Fidelity Investments</div><p>Current professional experience. Add your official job title and selected responsibilities or accomplishments before sharing this portfolio.</p></div></div>
-        <div class="role"><div class="date">July 2021 – April 2025</div><div><h3>Performance Team Lead / Manager</h3><div class="org">ZoomInfo · Waltham, Massachusetts</div><ul><li>Led a performance engineering Center of Excellence, providing tooling, infrastructure, support and bottleneck resolution.</li><li>Built Gatling-based performance testing integrated with Maven, Git, Taurus/Docker, Jenkins, BlazeMeter and Grafana.</li><li>Built load-test pipelines integrated with CI/CD and executed tests for GKE/GAE microservices.</li><li>Applied chaos engineering practices using Litmus and Chaos Mesh.</li></ul></div></div>
-        <div class="role"><div class="date">March 2018 – July 2021</div><div><h3>Performance Engineer Lead</h3><div class="org">Constant Contact / Endurance International Group · Waltham, Massachusetts</div><ul><li>Worked in an SRE capacity, optimizing web page load times and resolving production issues.</li><li>Used Dynatrace to monitor microservices and cloud-native applications; developed dashboards and custom metrics.</li><li>Performed API, database and microservices performance tuning and improved monitoring strategies.</li></ul></div></div>
-        <div class="role"><div class="date">October 2015 – February 2018</div><div><h3>Principal Performance Engineer</h3><div class="org">DSW Inc. · Columbus, Ohio</div><ul><li>Worked across Oracle ATG Web Commerce, order management, tax calculation and credit-card authorization.</li><li>Contributed to architecture reviews for scalable, resilient and reliable solutions.</li><li>Applied Akamai CDN, DNS, web profiling, LDAP and load-balancer knowledge.</li></ul></div></div>
-        <div class="role"><div class="date">July 2014 – September 2015</div><div><h3>Senior Performance Test Engineer</h3><div class="org">General Motors · via Mastech</div><p>Developed shared performance-testing libraries, tested REST APIs and web services, and performed mobile load testing.</p></div></div>
-        <div class="role"><div class="date">March – June 2014</div><div><h3>Senior Performance Test Engineer</h3><div class="org">Johnson & Johnson · via Collaborative Consulting</div><p>Established a LoadRunner test environment and monitored Citrix, Windows, JBoss and database performance.</p></div></div>
-        <div class="role"><div class="date">March 2012 – November 2013</div><div><h3>Senior Performance Test Lead</h3><div class="org">Nike · via CTSH</div><p>Created SOASTA cloud performance scenarios and used Omniture, Charles Proxy, Dynatrace and New Relic for analytics and monitoring.</p></div></div>
-        <div class="role"><div class="date">May 2010 – February 2012</div><div><h3>Senior Performance Test Lead</h3><div class="org">Comcast · via CTSH</div><p>Led web-service performance testing in an ESB/SOA architecture and analyzed Java core and heap dumps.</p></div></div>
-        <div class="role"><div class="date">January – April 2010</div><div><h3>Performance Test Lead</h3><div class="org">Travelers Insurance · via CTSH</div><p>Defined performance scenarios and test strategies; reported throughput, latency, errors and infrastructure utilization.</p></div></div>
-        <div class="role"><div class="date">November 2006 – December 2009</div><div><h3>Performance Lead</h3><div class="org">Mercury Insurance Group · via CTSH</div><p>Developed LoadRunner scripts for Web, Web Services and Citrix; executed a 1,500-user load test across a 15-server Citrix farm.</p></div></div>
-        <div class="role"><div class="date">January – October 2006</div><div><h3>Performance Lead</h3><div class="org">MetLife · via CTSH</div><p>Designed performance test plans and load strategies; analyzed response time, throughput and errors and used Dynatrace for root-cause analysis.</p></div></div>
-        <div class="role"><div class="date">March 2004 – December 2005</div><div><h3>Java Developer and Performance Tester</h3><div class="org">Cognizant Technology Solutions · India</div><p>Gathered requirements and created, executed and maintained LoadRunner scripts for the New York Times project.</p></div></div>
-      </div>
-    </div>
-  </section>
+<footer>
+  <div class="wrap">&copy; <span id="yr">2026</span> Vinod Kumar</div>
+</footer>
 
-  <section id="credentials">
-    <div class="wrap">
-      <div class="section-head"><div class="eyebrow">Education & credentials</div><h2>Credentials</h2></div>
-      <div class="grid">
-        <article class="card"><h3>Education</h3><p><strong>B.E., Computer Science & Engineering</strong><br>G. B. Pant Engineering College (Autonomous), Uttarakhand, India<br>Graduated with Honors · 77%</p></article>
-        <article class="card"><h3>Certifications</h3><ul><li>New Relic Certified Performance Pro</li><li>SOASTA CloudTest Foundation & Specialist</li><li>Gremlin Certified Chaos Engineering Practitioner</li><li>BlazeMeter Performance Testing Certified Master</li><li>Cognizant Certified Professional – Performance Testing & LoadRunner</li><li>Gatling Certified</li><li>Akamai CloudTest Foundation and Specialist</li></ul></article>
-        <article class="card"><h3>Awards</h3><ul><li>“Above and Beyond” Award — Cognizant (twice)</li><li>“SPOT Award” — Cognizant, 2012 (Nike project)</li></ul></article>
-        <article class="card"><h3>Industry conferences</h3><ul><li>O’Reilly Velocity Conference, New York — 2019</li><li>AWS re:Invent, Las Vegas — 2020</li></ul></article>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="wrap">
-      <div class="eyebrow">Get in touch</div><h2>Let’s talk engineering.</h2>
-      <p class="sub">For conversations about performance engineering, SRE, observability, resilience and AI infrastructure.</p>
-      <div class="contact">
-        <a class="btn" href="mailto:kumarvinodgupta@gmail.com">Email Vinod</a>
-        <a class="btn secondary" href="https://www.linkedin.com/in/vinod-kumar-0a890518/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
-      </div>
-    </div>
-  </section>
-</main>
-<footer><div class="wrap">© <span id="year"></span> Vinod Kumar · Personal professional portfolio</div></footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
 </body>
 </html>
